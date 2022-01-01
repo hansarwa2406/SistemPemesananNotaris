@@ -27,7 +27,7 @@
             </symbol>
         </svg>
 
-        <title>WPU Blog | {{ $title }}</title>
+        <title>Notaris Tety Andriani - {{ $title }}</title>
     </head>
 
     <body>
