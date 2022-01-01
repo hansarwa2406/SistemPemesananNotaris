@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Client extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+
+    public function getRouteKeyName()
+    {
+        return 'id_klien';
+    }
+
+    public function booking()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }
