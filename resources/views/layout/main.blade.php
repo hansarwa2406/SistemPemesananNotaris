@@ -47,11 +47,11 @@
             @yield('container')
         </div>
 
-        @include('partials.footer')
+        {{-- @include('partials.footer') --}}
 
-        {{-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle text-white"></i></button> --}}
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle text-white"></i></button>
 
-        <!--=============== SCROLL UP ===============-->
+        {{-- <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up"> 
             <i class="ri-arrow-up-fill scrollup__icon"></i>
         </a>
@@ -60,11 +60,11 @@
         <script src="assets/js/scrollreveal.min.js"></script>
         
         <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js"></script> --}}
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
-        {{-- <script>
+        <script>
             //Get the button:
             mybutton = document.getElementById("myBtn");
 
@@ -84,6 +84,6 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
-        </script> --}}
+        </script>
     </body>
 </html>
