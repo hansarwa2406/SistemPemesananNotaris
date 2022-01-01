@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
         {{-- My Style --}}
-        <link rel="stylesheet" href="/css/style.css">
+        {{-- <link rel="stylesheet" href="/css/style.css"> --}}
 
         <!--=============== FAVICON ===============-->
         <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -21,7 +21,7 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
         <!--=============== CSS ===============-->
-        {{-- <link rel="stylesheet" href="/assets/css/styles.css"> --}}
+        <link rel="stylesheet" href="/assets/css/styles.css">
 
         {{-- SVG --}}
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -41,13 +41,13 @@
 
     <body>
 
-        @include('partials.navbar')
+        {{-- @include('partials.navbar') --}}
 
         <div class="container mt-4">
             @yield('container')
         </div>
 
-        @include('partials.footer')
+        {{-- @include('partials.footer') --}}
 
         {{-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle text-white"></i></button> --}}
 
@@ -62,7 +62,7 @@
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
         
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> --}}
 
         {{-- <script>
             //Get the button:
