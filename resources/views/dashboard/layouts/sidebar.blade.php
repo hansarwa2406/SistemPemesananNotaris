@@ -26,5 +26,22 @@
                 </a>
             </li>
         </ul>
+
+        <hr class="my-4">
+
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/account*') ? 'active' : '' }}" aria-current="page" href="/account">
+                    <span data-feather="settings"></span>
+                    Pengaturan Akun
+                </a>
+            </li>
+            <li class="nav-item">
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="nav-link bg-light border-0"><span data-feather="log-out"></span> Logout</button>
+                </form>
+            </li>
+        </ul>
     </div>
 </nav>
