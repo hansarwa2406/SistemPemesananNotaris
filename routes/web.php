@@ -41,7 +41,7 @@ Route::get('/about', function () {
 // --------------------------------------------------------------------------
 
 // All Posts
-Route::get('/blog', [PostController::class, 'index']);
+Route::get('/post', [PostController::class, 'index']);
 
 // halaman single post
 Route::get('posts/{post:slug}', [PostController::class, 'show']);

@@ -88,29 +88,35 @@
                 </h2>
 
                 <div class="steps__container grid">
-                    <div class="steps__card">
-                        <div class="steps__card-number">01</div>
-                        <h3 class="steps__card-title">Jadwal Konsultasi</h3>
-                        <p class="steps__card-description">
-                            Buat jadwal konsultasi anda dengan notaris kami.
-                        </p>
-                    </div>
+                    <a href="/schedules" class="nav__link">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 class="steps__card-title">Jadwal Konsultasi</h3>
+                            <p class="steps__card-description">
+                                Buat jadwal konsultasi anda dengan notaris kami.
+                            </p>
+                        </div>
+                    </a>
 
-                    <div class="steps__card">
-                        <div class="steps__card-number">02</div>
-                        <h3 class="steps__card-title">Blog Notaris</h3>
-                        <p class="steps__card-description">
-                            Berita dan informasi mengenai kenotariatan.
-                        </p>
-                    </div>
+                    <a href="/post" class="nav__link">
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 class="steps__card-title">Blog Notaris</h3>
+                            <p class="steps__card-description">
+                                Berita dan informasi mengenai kenotariatan.
+                            </p>
+                        </div>
+                    </a>
 
-                    <div class="steps__card">
-                        <div class="steps__card-number">03</div>
-                        <h3 class="steps__card-title">Ruang Diskusi</h3>
-                        <p class="steps__card-description">
-                            Anda dapat berdiskusi dengan orang lain dan notaris terkait kenotariatan
-                        </p>
-                    </div>
+                    <a href="/chats" class="nav__link">
+                        <div class="steps__card">
+                            <div class="steps__card-number">03</div>
+                            <h3 class="steps__card-title">Ruang Diskusi</h3>
+                            <p class="steps__card-description">
+                                Anda dapat berdiskusi dengan orang lain dan notaris terkait kenotariatan
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

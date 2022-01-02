@@ -16,13 +16,25 @@
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
                     <span data-feather="file-text"></span>
-                    My Posts
+                    Blog
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/clients*') ? 'active' : '' }}" href="/dashboard/clients">
-                    <span data-feather="file-text"></span>
+                    <span data-feather="users"></span>
                     Klien
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/notary*') ? 'active' : '' }}" href="/dashboard/notary">
+                    <span data-feather="users"></span>
+                    Notaris
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/booking*') ? 'active' : '' }}" href="/dashboard/booking">
+                    <span data-feather="clock"></span>
+                    Jadwal Konsultasi
                 </a>
             </li>
         </ul>
