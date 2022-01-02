@@ -1,8 +1,6 @@
 @extends('layouthome.main')
 
 @section('container')
-    
-
     <main class="main">
         <!--==================== HOME ====================-->
         <section class="home" id="home">
@@ -11,11 +9,13 @@
 
                 <div class="home__data">
                     <h2 class="home__title">
-                        Layanan Konsultasi Notaris</h2><br> <hr> 
+                        Notariku</h2>
+                        <h3> Sistem Penjadwalan Konsultasi dengan Notaris </h3> <br> <hr>
+                        
                         <h2> By Tety Andriani S.H</h2>
                     
                     <p class="home__description">
-                        .
+                        
                     </p>
                     <a href="#about" class="button button--flex">
                         Explore <i class="ri-arrow-right-down-line button__icon"></i>
@@ -47,35 +47,34 @@
 
                 <div class="about__data">
                     <h2 class="section__title about__title">
-                        Who we really are & <br> why choose us
+                        Mengenai Notariku by <br> Notaris Tety Andriani
                     </h2>
 
                     <p class="about__description">
-                        We have over 4000+ unbiased reviews and our customers 
-                        trust our plant process and delivery service every time
+                        Kami merupakan Profesional Notaris dan Komisioning Dokumen Online Maupun Offline yang efisien, aman, dan cepat serta dipercaya dalam menanggani kebutuhan terkait kenotariatan anda.
                     </p>
 
                     <div class="about__details">
                         <p class="about__details-description">
                             <i class="ri-checkbox-fill about__details-icon"></i>
-                            We always deliver on time.
+                            Kami melayani masyarakat dalam hal pembuatan akta autentik.
                         </p>
                         <p class="about__details-description">
                             <i class="ri-checkbox-fill about__details-icon"></i>
-                            We give you guides to protect and care for your plants.
+                            Kami menjamin kerahasiaan data anda secara hukum yuridis.
                         </p>
                         <p class="about__details-description">
                             <i class="ri-checkbox-fill about__details-icon"></i>
-                            We always come over for a check-up after sale.
+                            Kami melayani layanan konsultasi secara online dan offline.
                         </p>
                         <p class="about__details-description">
                             <i class="ri-checkbox-fill about__details-icon"></i>
-                            100% money back guaranteed.
+                            Kami memberikan kenyaman, kecepatan, dan kemudahan dalam penjadwalan dan pembuatan dokumen.
                         </p>
                     </div>
 
                     <a href="#" class="button--link button--flex">
-                        Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
+                        Menjadwalkan Pertemuan <i class="ri-arrow-right-down-line button__icon"></i>
                     </a>
                 </div>
             </div>
@@ -128,9 +127,9 @@
 
             <div class="product__container grid">
                 <article class="product__card">
-                    <div class="product__circle"></div>
+                    {{-- <div class="product__circle"></div> --}}
 
-                    <img src="assets/img/product1.png" alt="" class="product__img">
+                    <img src="assets/img/klien.png" alt="" class="product__img">
 
                     <h3 class="product__title">Klien CRUD</h3>
                     <span class="product__price"></span>
@@ -141,22 +140,22 @@
                 </article>
 
                 <article class="product__card">
-                    <div class="product__circle"></div>
+                    {{-- <div class="product__circle"></div> --}}
 
-                    <img src="assets/img/product2.png" alt="" class="product__img">
+                    <img src="assets/img/notaris.png" alt="" class="product__img">
 
                     <h3 class="product__title">Notaris CRUD</h3>
                     <span class="product__price"></span>
 
-                    <button class="button--flex product__button"><a href="/dashboard/nota">
+                    <button class="button--flex product__button"><a href="/dashboard/sisw">
                         <i class="ri-shopping-bag-line"></i></a>
                     </button> 
                 </article>
 
                 <article class="product__card">
-                    <div class="product__circle"></div>
+                    {{-- <div class="product__circle"></div> --}}
 
-                    <img src="assets/img/product3.png" alt="" class="product__img">
+                    <img src="assets/img/booking.png" alt="" class="product__img" >
 
                     <h3 class="product__title">Booking CRUD </h3>
                     <span class="product__price"></span>
@@ -166,6 +165,7 @@
                     </button> 
                 </article>
 
+                
                 <!-- <article class="product__card">
                     <div class="product__circle"></div>
 
@@ -363,73 +363,4 @@
             </div>
         </section>
     </main>
-
-    <!--==================== FOOTER ====================-->
-        <footer class="footer section">
-            <div class="footer__container container grid">
-                <div class="footer__content">
-                    <a href="#" class="footer__logo">
-                        <i class="ri-leaf-line footer__logo-icon"></i> NotaryBookingSystem
-                    </a>
-
-                    <h3 class="footer__title">
-                        Subscribe to our newsletter <br> to stay update
-                    </h3>
-
-                    <div class="footer__subscribe">
-                        <input type="email" placeholder="Enter your email" class="footer__input">
-
-                        <button class="button button--flex footer__button">
-                            Subscribe
-                            <i class="ri-arrow-right-up-line button__icon"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Alamat Kami</h3>
-
-                    <ul class="footer__data">
-                        <li class="footer__information">Jalan Durentiga Selatan</li>
-                        <li class="footer__information">No. 15 - Jakarta Selatan</li>
-                        <li class="footer__information">+62 819-0597-2540</li>
-                    </ul>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Kontak Kami</h3>
-
-                    <ul class="footer__data">
-                        <li class="footer__information">+62 819-0597-2540</li>
-                        
-                        <div class="footer__social">
-                            <a href="https://www.facebook.com/" class="footer__social-link">
-                                <i class="ri-facebook-fill"></i>
-                            </a>
-                            <a href="https://www.instagram.com/" class="footer__social-link">
-                                <i class="ri-instagram-line"></i>
-                            </a>
-                            <a href="https://twitter.com/" class="footer__social-link">
-                                <i class="ri-twitter-fill"></i>
-                            </a>
-                        </div>
-                    </ul>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">
-                        We accept all credit cards
-                    </h3>
-
-                    <div class="footer__cards">
-                        <img src="assets/img/card1.png" alt="" class="footer__card">
-                        <img src="assets/img/card2.png" alt="" class="footer__card">
-                        <img src="assets/img/card3.png" alt="" class="footer__card">
-                        <img src="assets/img/card4.png" alt="" class="footer__card">
-                    </div>
-                </div>
-            </div>
-
-            <p class="footer__copy">&#169; NotaryBookingSystem. All rigths reserved</p>
-        </footer>
 @endsection
