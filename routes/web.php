@@ -10,6 +10,8 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardClientController;
 use App\Http\Controllers\DashboardNotaryController;
+use App\Http\Controllers\DashboardAccountController;
+use App\Http\Controllers\DashboardBookingController;
 
 
 /*
@@ -73,6 +75,7 @@ Route::get('/dashboard', function(){
     return view('dashboard.index');
 })->middleware('auth');
 
+// Admin
 // Posts
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
@@ -82,3 +85,10 @@ Route::resource('/dashboard/clients', DashboardClientController::class)->middlew
 
 // Notaries
 Route::resource('/dashboard/notaries', DashboardNotaryController::class)->middleware('auth');
+
+// Booking
+Route::resource('/dashboard/bookings', DashboardBookingController::class)->middleware('auth');
+// -------------------------------------------------------------------------------------------------------------------
+
+// Account
+Route::resource('/dashboard/account', DashboardAccountController::class)->except('show', 'create', 'store')->middleware('auth');

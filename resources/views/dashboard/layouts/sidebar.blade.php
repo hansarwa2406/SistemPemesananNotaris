@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('dashboard/booking*') ? 'active' : '' }}" href="/dashboard/booking">
+                <a class="nav-link {{ Request::is('dashboard/bookings*') ? 'active' : '' }}" href="/dashboard/bookings">
                     <span data-feather="clock"></span>
                     Jadwal Konsultasi
                 </a>
