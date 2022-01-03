@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardClientController;
+use App\Http\Controllers\DashboardNotaryController;
 
 
 /*
@@ -78,3 +79,6 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 
 // Clients
 Route::resource('/dashboard/clients', DashboardClientController::class)->middleware('auth');
+
+// Notaries
+Route::resource('/dashboard/notaries', DashboardNotaryController::class)->middleware('auth');

@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('dashboard/notary*') ? 'active' : '' }}" href="/dashboard/notary">
+                <a class="nav-link {{ Request::is('dashboard/notaries*') ? 'active' : '' }}" href="/dashboard/notaries">
                     <span data-feather="users"></span>
                     Notaris
                 </a>

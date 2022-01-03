@@ -46,7 +46,7 @@ class DashboardClientController extends Controller
         ]);
         Client::create($request->all());
 
-        return redirect('/dashboard/clients')->with('Berhasil', 'Post baru berhasil ditambahkan!');
+        return redirect('/dashboard/clients')->with('Berhasil', 'Data klien baru berhasil ditambahkan!');
     }
 
     /**
@@ -93,7 +93,7 @@ class DashboardClientController extends Controller
         ]);
         $client->update($request->all());
 
-        return redirect('/dashboard/clients')->with('Berhasil', 'Post telah diperbarui!');
+        return redirect('/dashboard/clients')->with('Berhasil', 'Data klien berhasil diperbarui!');
     }
 
     /**
@@ -106,6 +106,6 @@ class DashboardClientController extends Controller
     {
         Client::destroy($client->id);
 
-        return redirect('/dashboard/clients')->with('Berhasil', 'Data Berhasil Dihapus');
+        return redirect('/dashboard/clients')->with('Berhasil', 'Data klien berhasil dihapus');
     }
 }
