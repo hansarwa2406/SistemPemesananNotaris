@@ -36,8 +36,8 @@
                         <td>{{ $clients->no_tlp }}</td>
                      
                         <td class=" text-center">
-                            <a href="/dashboard/klien/{{ $clients->id_klien }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
-                            <a href="/dashboard/klien/{{ $clients->id_klien }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
+                            <a href="/dashboard/clients/{{ $clients->id_klien }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
+                            <a href="/dashboard/clients/{{ $clients->id_klien }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
 
                             <!-- Button trigger modal -->
                             <button type="button" class="badge bg-danger border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete">

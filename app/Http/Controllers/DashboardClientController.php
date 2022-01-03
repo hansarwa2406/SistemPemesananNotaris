@@ -46,7 +46,7 @@ class DashboardClientController extends Controller
         ]);
         Client::create($request->all());
 
-        return redirect('/dashboard/clients')->with('Berhasil', 'New post has been added!');
+        return redirect('/dashboard/clients')->with('Berhasil', 'Post baru berhasil ditambahkan!');
     }
 
     /**
@@ -57,7 +57,9 @@ class DashboardClientController extends Controller
      */
     public function show(Client $client)
     {
-        //
+        return view('dashboard.clients.show', [
+            'client' => $client
+        ]);
     }
 
     /**
@@ -68,7 +70,9 @@ class DashboardClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        return view('dashboard.clients.edit', [
+            'client' => $client
+        ]);
     }
 
     /**
@@ -80,7 +84,16 @@ class DashboardClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        //
+        $request->validate([
+            'id_klien' => 'required|max:8',
+            'nama_klien' => 'required|max:80',
+            'alamat' => 'required|max:100',
+            'no_tlp' => 'required|max:14',
+
+        ]);
+        $client->update($request->all());
+
+        return redirect('/dashboard/clients')->with('Berhasil', 'Post telah diperbarui!');
     }
 
     /**
