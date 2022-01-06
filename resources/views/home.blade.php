@@ -9,7 +9,7 @@
 
                 <div class="home__data">
                     <h2 class="home__title">
-                        Notariku</h2>
+                        Notarisku</h2>
                         <h3> Sistem Penjadwalan Konsultasi dengan Notaris </h3> <br> <hr>
                         
                         <h2> By Tety Andriani S.H</h2>
@@ -47,7 +47,7 @@
 
                 <div class="about__data">
                     <h2 class="section__title about__title">
-                        Mengenai Notariku by <br> Notaris Tety Andriani
+                        Mengenai Notarisku by <br> Notaris Tety Andriani
                     </h2>
 
                     <p class="about__description">
@@ -343,25 +343,25 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form">
+                <form action="/dashboard/pendings/" class="contact__form">
                     <div class="contact__inputs">
                         <div class="contact__content">
-                            <input type="email" placeholder=" " class="contact__input">
+                            <input type="email" placeholder=" " class="contact__input" id="email_klien">
                             <label for="" class="contact__label">Email</label>
                         </div>
 
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input">
+                            <input type="text" placeholder=" " class="contact__input" id="subjek_klien">
                             <label for="" class="contact__label">Subject</label>
                         </div>
 
                         <div class="contact__content contact__area">
-                            <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
+                            <textarea name="message" placeholder=" " class="contact__input" id="pesan_klien"></textarea>                              
                             <label for="" class="contact__label">Message</label>
                         </div>
                     </div>
 
-                    <button class="button button--flex">
+                    <button class="button button--flex" type="submit">
                         Kirim Pesan
                         <i class="ri-arrow-right-up-line button__icon"></i>
                     </button>
