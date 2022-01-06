@@ -321,7 +321,7 @@
             <div class="contact__container grid">
                 <div class="contact__box">
                     <h2 class="section__title">
-                        Segera hubungi kami  <br> untuk informasi <br> lebih lanjut
+                        Segera hubungi kami  <br> untuk konsultasi <br> lebih lanjut
                     </h2>
 
                     <div class="contact__data">
