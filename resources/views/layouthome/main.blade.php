@@ -32,7 +32,7 @@
 
         @include('layouthome.footer')
 
-        <a href="https://api.whatsapp.com/send?phone=+6287883798548&text=Nisa saya ingin bertanya boleh?" target="_blank"><button id="myWa" title="Go to WA"><i style="color: white" class="bi bi-whatsapp"></i></button></a>
+        <a href="https://api.whatsapp.com/send?phone=+6281905972540&text=Saya ingin bertanya boleh?" target="_blank"><button id="myWa" title="Go to WA"><i style="color: white" class="bi bi-whatsapp"></i></button></a>
 
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up"> 

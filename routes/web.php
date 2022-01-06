@@ -80,11 +80,11 @@ Route::get('/dashboard', function(){
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
-// Clients
-Route::resource('/dashboard/clients', DashboardClientController::class)->middleware('auth');
-
 // Notaries
 Route::resource('/dashboard/notaries', DashboardNotaryController::class)->middleware('auth');
+
+// Pendings
+Route::resource('/dashboard/pendings', DashboardPendingController::class)->middleware('auth');
 
 // Booking
 Route::resource('/dashboard/bookings', DashboardBookingController::class)->middleware('auth');
