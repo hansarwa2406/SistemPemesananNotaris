@@ -18,7 +18,7 @@ class CreateNotariesTable extends Migration
             $table->string('id_notaris')->unique();
             $table->string('nama_notaris');
             $table->string('alamat');
-            $table->integer('no_tlp');
+            $table->string('no_tlp');
             $table->string('jabatan');
             $table->timestamps();
         });

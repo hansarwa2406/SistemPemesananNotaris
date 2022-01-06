@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3">
                 <label for="no_tlp" class="form-label">Nomor Telepon</label>
-                <input type="text" class="form-control @error('no_tlp') is-invalid @enderror" id="no_tlp" name="no_tlp" value="{{ old('no_tlp') }}" required autofocus>
+                <input type="text" class="form-control @error('no_tlp') is-invalid @enderror" id="no_tlp" name="no_tlp" value="{{ old('no_tlp') }}" placeholder="(+62)" required autofocus>
                 @error('no_tlp')
                     <div class="invalid-feedback">
                         {{ $message }}

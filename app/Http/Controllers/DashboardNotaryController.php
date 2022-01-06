@@ -38,10 +38,10 @@ class DashboardNotaryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_notaris' => 'required',
+            'id_notaris' => 'required|max:8',
             'nama_notaris' => 'required',
-            'alamat' => 'required',
-            'no_tlp' => 'required',
+            'alamat' => 'required|max:50',
+            'no_tlp' => 'required|max:13',
             'jabatan' => 'required',
         ]);
         Notary::create($request->all());
@@ -85,10 +85,10 @@ class DashboardNotaryController extends Controller
     public function update(Request $request, Notary $notary)
     {
         $request->validate([
-            'id_notaris' => 'required',
+            'id_notaris' => 'required|max:8',
             'nama_notaris' => 'required',
-            'alamat' => 'required',
-            'no_tlp' => 'required',
+            'alamat' => 'required|max:50',
+            'no_tlp' => 'required|max:13',
             'jabatan' => 'required',
         ]);
 
