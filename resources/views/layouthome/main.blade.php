@@ -13,6 +13,12 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="/assets/css/styles.css">
 
+        {{-- My Style --}}
+        <link rel="stylesheet" href="/css/style.css">
+
+        {{-- Bootstrap Icon --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
         <title>Notariku by Tety Andriani</title>
     </head>
 
@@ -26,7 +32,7 @@
 
         @include('layouthome.footer')
 
-        {{-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle text-white"></i></button> --}}
+        <a href="https://api.whatsapp.com/send?phone=+6287883798548&text=Nisa saya ingin bertanya boleh?" target="_blank"><button id="myWa" title="Go to WA"><i style="color: white" class="bi bi-whatsapp"></i></button></a>
 
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up"> 
@@ -38,5 +44,27 @@
         
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+
+        {{-- <script>
+            //Get the button:
+            mybutton = document.getElementById("myWa");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "block";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script> --}}
     </body>
 </html>

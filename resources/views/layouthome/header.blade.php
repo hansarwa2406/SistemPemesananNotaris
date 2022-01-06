@@ -26,11 +26,11 @@
 
                 @auth
                     <li class="nav__item">
-                        <a href="/dashboard" class="nav__link"><i class="bi bi-box-arrow-in-right"></i> Akun Saya</a>
+                        <a href="/dashboard" class="nav__link"> Akun Saya</a>
                     </li>
                 @else
                     <li class="nav__item">
-                        <a href="/login" class="nav__link"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+                        <a href="/login" class="nav__link"> Login</a>
                     </li>
                 @endauth
             </ul>
