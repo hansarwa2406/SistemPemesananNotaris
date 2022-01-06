@@ -29,13 +29,13 @@
                 @foreach ($pending as $pendings)
                     <tr>
                         <td class=" text-center">{{ $loop->iteration }}</td>
-                        <td>{{ $pendings->email_klien }}</td>
-                        <td>{{ $pendings->subjek_klien}}</td>
-                        <td>{{ $pendings->pesan_klien }}</td>
+                        <td>{{ $pendings->email_client }}</td>
+                        <td>{{ $pendings->subject_client}}</td>
+                        <td>{{ $pendings->message_client }}</td>
 
                         <td class=" text-center">
-                            <a href="/dashboard/pendings/{{ $pendings->email_klien }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
-                            <a href="/dashboard/pendings/{{ $pendings->email_klien }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
+                            <a href="/dashboard/pendings/{{ $pendings->email_client }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
+                            <a href="/dashboard/pendings/{{ $pendings->email_client }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
 
                             <!-- Button trigger modal -->
                             <button type="button" class="badge bg-danger border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete">
@@ -53,11 +53,11 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Apakah anda ingin menghapus data pending: <strong>"{{ $pendings->email_klien }}"</strong> ?
+                                    Apakah anda ingin menghapus data pending: <strong>"{{ $pendings->email_client }}"</strong> ?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <form action="/dashboard/pendings/{{ $pendings->email_klien }}" method="POST" class=" d-inline">
+                                    <form action="/dashboard/pendings/{{ $pendings->email_client }}" method="POST" class=" d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-danger">Delete</button>

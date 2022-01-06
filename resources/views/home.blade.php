@@ -346,17 +346,17 @@
                 <form action="/dashboard/pendings/" class="contact__form">
                     <div class="contact__inputs">
                         <div class="contact__content">
-                            <input type="email" placeholder=" " class="contact__input" id="email_klien">
+                            <input type="email" placeholder=" " class="contact__input" id="email_client">
                             <label for="" class="contact__label">Email</label>
                         </div>
 
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" id="subjek_klien">
+                            <input type="text" placeholder=" " class="contact__input" id="subject_client">
                             <label for="" class="contact__label">Subject</label>
                         </div>
 
                         <div class="contact__content contact__area">
-                            <textarea name="message" placeholder=" " class="contact__input" id="pesan_klien"></textarea>                              
+                            <textarea name="message" placeholder=" " class="contact__input" id="message_client"></textarea>                              
                             <label for="" class="contact__label">Message</label>
                         </div>
                     </div>
