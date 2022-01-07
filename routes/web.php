@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardClientController;
 use App\Http\Controllers\DashboardNotaryController;
 use App\Http\Controllers\DashboardAccountController;
 use App\Http\Controllers\DashboardBookingController;
+use App\Http\Controllers\DashboardPendingController;
 
 
 /*

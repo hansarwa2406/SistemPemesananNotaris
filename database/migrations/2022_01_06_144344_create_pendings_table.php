@@ -16,7 +16,7 @@ class CreatePendingsTable extends Migration
         Schema::create('pendings', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('subject');
             $table->string('message');
             $table->timestamps();

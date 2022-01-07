@@ -38,10 +38,10 @@ class DashboardPendingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email' => 'required|max:8',
-            'phone' => 'required|max:80',
+            'email' => 'required|max:30',
+            'phone' => 'required|max:15',
             'subject' => 'required|max:100',
-            'message' => 'required|max:14',
+            'message' => 'required',
 
         ]);
         Pending::create($request->all());
@@ -85,10 +85,10 @@ class DashboardPendingController extends Controller
     public function update(Request $request, Pending $pending)
     {
         $request->validate([
-            'email' => 'required|max:8',
-            'phone' => 'required|max:80',
+            'email' => 'required|max:30',
+            'phone' => 'required|max:15',
             'subject' => 'required|max:100',
-            'message' => 'required|max:14',
+            'message' => 'required',
 
         ]);
         $pending->update($request->all());

@@ -5,31 +5,40 @@
     <h1 class="h2">Edit Data pending</h1>
   </div>
   <div class="col-lg-8">
-    <form method="POST" action="/dashboard/pendings/{{ $pending->email_client }}" enctype="multipart/form-data">
+    <form method="POST" action="/dashboard/pendings/{{ $pending->email }}" enctype="multipart/form-data">
         @method('put')
         @csrf
         <div class="mb-3">
-          <label for="email_client" class="form-label">Email</label>
-          <input type="text" class="form-control @error('email_client') is-invalid @enderror" id="email_client" name="email_client" value="{{ old('email_client', $pending->email_client) }}" required autofocus>
-          @error('email_client')
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email', $pending->email) }}" required autofocus>
+          @error('email')
               <div class="invalid-feedback">
                   {{ $message }}
               </div>
           @enderror
       </div>
         <div class="mb-3">
-          <label for="subject_client" class="form-label">Subjek</label>
-          <input type="text" class="form-control @error('subject_client') is-invalid @enderror" id="subject_client" name="subject_client" value="{{ old('subject_client', $pending->subject_client) }}" required autofocus>
-          @error('subject_client')
+          <label for="phone" class="form-label">No. Tlp</label>
+          <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" value="{{ old('phone', $pending->phone) }}" required autofocus>
+          @error('phone')
               <div class="invalid-feedback">
                   {{ $message }}
               </div>
           @enderror
       </div>
         <div class="mb-3">
-          <label for="message_client" class="form-label">Pesan</label>
-          <input type="text" class="form-control @error('message_client') is-invalid @enderror" id="message_client" name="message_client" value="{{ old('message_client', $pending->message_client) }}" required autofocus>
-          @error('message_client')
+          <label for="subject" class="form-label">Subjek</label>
+          <input type="text" class="form-control @error('subject') is-invalid @enderror" id="subject" name="subject" value="{{ old('subject', $pending->subject) }}" required autofocus>
+          @error('subject')
+              <div class="invalid-feedback">
+                  {{ $message }}
+              </div>
+          @enderror
+      </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Pesan</label>
+          <input type="text" class="form-control @error('message') is-invalid @enderror" id="message" name="message" value="{{ old('message', $pending->message) }}" required autofocus>
+          @error('message')
               <div class="invalid-feedback">
                   {{ $message }}
               </div>

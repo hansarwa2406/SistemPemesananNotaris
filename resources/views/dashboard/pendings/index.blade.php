@@ -20,6 +20,7 @@
                 <tr class=" text-center">
                     <th scope="col">No.</th>
                     <th scope="col">Email</th>
+                    <th scope="col">No. Tlp</th>
                     <th scope="col">Subjek</th>
                     <th scope="col">Pesan</th>
                     <th scope="col">Actions</th>
@@ -29,17 +30,16 @@
                 @foreach ($pending as $pendings)
                     <tr>
                         <td class=" text-center">{{ $loop->iteration }}</td>
-                        <td>{{ $pendings->email_client }}</td>
-                        <td>{{ $pendings->subject_client}}</td>
-                        <td>{{ $pendings->message_client }}</td>
+                        <td>{{ $pendings->email }}</td>
+                        <td>{{ $pendings->phone }}</td>
+                        <td>{{ $pendings->subject}}</td>
+                        <td>{{ $pendings->message }}</td>
 
                         <td class=" text-center">
-                            <a href="/dashboard/pendings/{{ $pendings->email_client }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
-                            <a href="/dashboard/pendings/{{ $pendings->email_client }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
+                            <a href="/dashboard/pendings/{{ $pendings->email }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
+                            <a href="/dashboard/pendings/{{ $pendings->email }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
 
-                                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
-  Popover on left
-</button>
+                            
 
                             <!-- Button trigger modal -->
                             <button type="button" class="badge bg-danger border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete">
@@ -57,11 +57,11 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Apakah anda ingin menghapus data pending: <strong>"{{ $pendings->email_client }}"</strong> ?
+                                    Apakah anda ingin menghapus data pending: <strong>"{{ $pendings->email }}"</strong> ?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <form action="/dashboard/pendings/{{ $pendings->email_client }}" method="POST" class=" d-inline">
+                                    <form action="/dashboard/pendings/{{ $pendings->email }}" method="POST" class=" d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-danger">Delete</button>
