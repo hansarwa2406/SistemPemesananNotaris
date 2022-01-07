@@ -26,6 +26,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/clients*') ? 'active' : '' }}" href="/dashboard/clients">
+                    <span data-feather="users"></span>
+                    Klien
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/pendings*') ? 'active' : '' }}" href="/dashboard/pendings">
                     <span data-feather="clipboard"></span>
                     Permohonan Konsultasi

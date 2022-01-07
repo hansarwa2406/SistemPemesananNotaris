@@ -83,6 +83,9 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 // Notaries
 Route::resource('/dashboard/notaries', DashboardNotaryController::class)->middleware('auth');
 
+// Clients
+Route::resource('/dashboard/clients', DashboardClientController::class)->middleware('auth');
+
 // Pendings
 Route::resource('/dashboard/pendings', DashboardPendingController::class)->middleware('auth');
 

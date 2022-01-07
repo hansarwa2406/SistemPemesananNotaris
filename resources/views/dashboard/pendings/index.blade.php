@@ -37,6 +37,10 @@
                             <a href="/dashboard/pendings/{{ $pendings->email_client }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
                             <a href="/dashboard/pendings/{{ $pendings->email_client }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
 
+                                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+  Popover on left
+</button>
+
                             <!-- Button trigger modal -->
                             <button type="button" class="badge bg-danger border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete">
                                 <span data-feather="trash-2">

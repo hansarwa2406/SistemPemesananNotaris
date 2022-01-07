@@ -12,6 +12,6 @@ class Pending extends Model
 
     public function getRouteKeyName()
     {
-        return 'email_client';
+        return 'email';
     }
 }

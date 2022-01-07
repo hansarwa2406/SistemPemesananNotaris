@@ -343,21 +343,26 @@
                     </div>
                 </div>
 
-                <form action="/dashboard/pendings/" class="contact__form">
+                <form action="/dashboard/pendings/" method="POST" class="contact__form">
                     <div class="contact__inputs">
                         <div class="contact__content">
-                            <input type="email" placeholder=" " class="contact__input" id="email_client">
-                            <label for="" class="contact__label">Email</label>
+                            <input type="email" placeholder=" " class="contact__input" id="email" name="email">
+                            <label for="email" class="contact__label">Email</label>
                         </div>
 
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" id="subject_client">
-                            <label for="" class="contact__label">Subject</label>
+                            <input type="text" placeholder=" " class="contact__input" id="phone" name="phone">
+                            <label for="phone" class="contact__label">Nomor Telepon / WA (081x)</label>
+                        </div>
+
+                        <div class="contact__content">
+                            <input type="text" placeholder=" " class="contact__input" id="subject" name="subject">
+                            <label for="subject" class="contact__label">Subjek</label>
                         </div>
 
                         <div class="contact__content contact__area">
-                            <textarea name="message" placeholder=" " class="contact__input" id="message_client"></textarea>                              
-                            <label for="" class="contact__label">Message</label>
+                            <textarea name="message" placeholder=" " class="contact__input" id="message" name="message"></textarea>                              
+                            <label for="message" class="contact__label">Pesan</label>
                         </div>
                     </div>
 
