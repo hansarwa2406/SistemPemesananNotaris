@@ -28,10 +28,10 @@
                     <li class="nav__item">
                         <a href="/dashboard" class="nav__link"> Akun Saya</a>
                     </li>
-                @else
+                {{-- @else
                     <li class="nav__item">
                         <a href="/login" class="nav__link"> Login</a>
-                    </li>
+                    </li> --}}
                 @endauth
             </ul>
 
