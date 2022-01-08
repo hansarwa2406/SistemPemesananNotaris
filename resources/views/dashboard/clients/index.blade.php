@@ -28,14 +28,14 @@
             </thead>
             <tbody>
                 @foreach ($client as $clients)
-                    <tr>
+                    <tr class=" text-center">
                         <td class=" text-center">{{ $loop->iteration }}</td>
                         <td>{{ $clients->id_klien }}</td>
                         <td>{{ $clients->nama_klien }}</td>
                         <td>{{ $clients->alamat }}</td>
                         <td>{{ $clients->no_tlp }}</td>
                      
-                        <td class=" text-center">
+                        <td>
                             <a href="/dashboard/clients/{{ $clients->id_klien }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
                             <a href="/dashboard/clients/{{ $clients->id_klien }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
 

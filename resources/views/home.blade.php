@@ -81,7 +81,7 @@
         </section>
 
         <!--==================== STEPS ====================-->
-        <section class="steps section container" >
+        <section class="steps section container" id="products">
             <div class="steps__bg">
                 <h2 class="section__title-center steps__title">
                     Layanan Kami <br> 
@@ -121,7 +121,7 @@
             </div>
         </section>
 
-        <!--==================== PRODUCTS ====================-->
+        <!--==================== PRODUCTS ====================
         <section class="product section container" id="products">
             <h2 class="section__title-center">
                 Layanan Kami <br> 
@@ -172,7 +172,7 @@
                 </article>
 
                 
-                <!-- <article class="product__card">
+                <article class="product__card">
                     <div class="product__circle"></div>
 
                     <img src="assets/img/product4.png" alt="" class="product__img">
@@ -209,9 +209,9 @@
                     <button class="button--flex product__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
-                </article> -->
+                </article>
             </div>
-        </section> 
+        </section>-->
 
         <!--==================== QUESTIONS ====================-->
         <section class="questions section" id="faqs">
@@ -344,6 +344,7 @@
                 </div>
 
                 <form action="/dashboard/pendings/" method="POST" class="contact__form">
+                    @csrf
                     <div class="contact__inputs">
                         <div class="contact__content">
                             <input type="email" placeholder=" " class="contact__input" id="email" name="email">

@@ -43,9 +43,8 @@
                     </div>
                 @enderror
             </div>
-           
 
-        <button type="submit" class="btn btn-primary">Tambah Data Pending</button>
+        <button type="submit" class="btn btn-primary">Tambah Data</button>
     </form>
     </div>
 @endsection

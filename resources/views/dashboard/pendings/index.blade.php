@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Data Pendings</h1>
+        <h1 class="h2">Data Permohonan Konsultasi</h1>
     </div>
 
     @if (session('Berhasil'))
@@ -13,8 +13,8 @@
         </div>
     @endif
 
-    <div class="table-responsive col-lg-8">
-        <a href="/dashboard/pendings/create" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Data Pending</a>
+    <div class="table-responsive col-lg-12">
+        <a href="/dashboard/pendings/create" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Permohonan Konsultasi</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr class=" text-center">
@@ -28,14 +28,14 @@
             </thead>
             <tbody>
                 @foreach ($pending as $pendings)
-                    <tr>
-                        <td class=" text-center">{{ $loop->iteration }}</td>
+                    <tr class=" text-center">
+                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $pendings->email }}</td>
                         <td>{{ $pendings->phone }}</td>
                         <td>{{ $pendings->subject}}</td>
                         <td>{{ $pendings->message }}</td>
 
-                        <td class=" text-center">
+                        <td>
                             <a href="/dashboard/pendings/{{ $pendings->email }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
                             <a href="/dashboard/pendings/{{ $pendings->email }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
 
