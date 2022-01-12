@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Data Notaris</h1>
+        <h1 class="h2">Data Penjadwalan Notaris Dengan Klien</h1>
     </div>
 
     @if (session('Berhasil'))
@@ -14,32 +14,30 @@
     @endif
 
     <div class="table-responsive col-lg-8">
-        <a href="/dashboard/notaries/create" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Data Notaris</a>
+        <a href="/dashboard/bookings/create" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Data Penjadwalan</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr class=" text-center">
                     <th scope="col">No.</th>
-                    <th scope="col">ID Notaris</th>
+                    <th scope="col">Nama Klien</th>
                     <th scope="col">Nama Notaris</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">Nomor Telepon</th>
-                    <th scope="col">Jabatan</th>
+                    <th scope="col">Perihal Subjek</th>
+                    <th scope="col">Waktu</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($notary as $notaries)
+                @foreach ($booking as $bookings)
                     <tr>
                         <td class=" text-center">{{ $loop->iteration }}</td>
-                        <td>{{ $notaries->id_notaris }}</td>
-                        <td>{{ $notaries->nama_notaris }}</td>
-                        <td>{{ $notaries->alamat }}</td>
-                        <td>{{ $notaries->no_tlp }}</td>
-                        <td>{{ $notaries->jabatan }}</td>
+                        <td>{{ $bookings->nama_klien }}</td>
+                        <td>{{ $bookings->nama_notaris }}</td>
+                        <td>{{ $bookings->subjek}}</td>
+                        <td>{{ $bookings->waktu }}</td>
 
                         <td class=" text-center">
-                            <a href="/dashboard/notaries/{{ $notaries->id_notaris }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
-                            <a href="/dashboard/notaries/{{ $notaries->id_notaris }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
+                            <a href="/dashboard/bookings/{{ $bookings->id }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
+                            <a href="/dashboard/bookings/{{ $bookings->id }}/edit" class="badge bg-warning text-decoration-none" title="Edit"><span data-feather="edit"></a>
 
                             <!-- Button trigger modal -->
                             <button type="button" class="badge bg-danger border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete">
@@ -57,11 +55,11 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Apakah anda ingin menghapus notaris: <strong>"{{ $notaries->id_notaris }}"</strong> ?
+                                    Apakah anda ingin menghapus jadwal: <strong>"{{ $bookings->id }}"</strong> ?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <form action="/dashboard/notaries/{{ $notaries->id_notaris }}" method="POST" class=" d-inline">
+                                    <form action="/dashboard/bookings/{{ $bookings->id }}" method="POST" class=" d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-danger">Delete</button>
