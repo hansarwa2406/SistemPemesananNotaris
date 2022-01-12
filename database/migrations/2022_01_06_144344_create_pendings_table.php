@@ -19,6 +19,7 @@ class CreatePendingsTable extends Migration
             $table->string('phone');
             $table->string('subject');
             $table->string('message');
+            $table->string('status');
             $table->timestamps();
         });
     }

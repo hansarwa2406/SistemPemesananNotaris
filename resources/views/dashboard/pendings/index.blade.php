@@ -23,6 +23,7 @@
                     <th scope="col">No. Tlp</th>
                     <th scope="col">Subjek</th>
                     <th scope="col">Pesan</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -34,6 +35,7 @@
                         <td>{{ $pendings->phone }}</td>
                         <td>{{ $pendings->subject}}</td>
                         <td>{{ $pendings->message }}</td>
+                        <td>{{ $pendings->status }}</td>
 
                         <td>
                             <a href="/dashboard/pendings/{{ $pendings->email }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>

@@ -42,6 +42,7 @@ class DashboardPendingController extends Controller
             'phone' => 'required|max:15',
             'subject' => 'required|max:100',
             'message' => 'required',
+            'status' => 'required'
 
         ]);
         Pending::create($request->all());
@@ -89,6 +90,7 @@ class DashboardPendingController extends Controller
             'phone' => 'required|max:15',
             'subject' => 'required|max:100',
             'message' => 'required',
+            'status' => 'required'
 
         ]);
         $pending->update($request->all());

@@ -44,6 +44,8 @@
                 @enderror
             </div>
 
+            <input type="hidden" id="status" name="status" value="Menunggu Konfirmasi">
+
         <button type="submit" class="btn btn-primary">Tambah Data</button>
     </form>
     </div>
