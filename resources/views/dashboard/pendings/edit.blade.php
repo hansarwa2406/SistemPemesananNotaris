@@ -56,8 +56,5 @@
     <button type="submit" class="btn btn-primary">Perbaharui Data</button>
   </form>
   </div>
- 
- 
-
 
 @endsection
