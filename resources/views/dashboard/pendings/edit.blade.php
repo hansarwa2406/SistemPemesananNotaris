@@ -44,7 +44,14 @@
               </div>
           @enderror
       </div>
-       
+
+      <div class="mb-3">
+        <label for="status" class="form-label">Persetujuan</label>
+        <select class="form-select" name="status">
+            <option value="Ditolak" selected>Ditolak</option>
+            <option value="Disetujui">Disetujui</option>
+        </select>
+    </div>
 
     <button type="submit" class="btn btn-primary">Perbaharui Data</button>
   </form>
