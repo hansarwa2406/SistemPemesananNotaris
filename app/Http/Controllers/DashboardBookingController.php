@@ -29,7 +29,7 @@ class DashboardBookingController extends Controller
     public function create()
     {
         return view('dashboard.bookings.create', [
-            'client' => Client::all(),
+            // 'client' => Client::all(),
             'notary' => Notary::all()
         ]);
     }
