@@ -1,8 +1,8 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-    <div class="container pt-3">
-        <div class="card" style="width: 18rem;">
+    <div class="container row pt-3">
+        <div class="col-lg-3">
             <div class="card-header">
                 <strong>Konfirmasi Klien</strong>
             </div>
@@ -16,21 +16,21 @@
         </div>
 
         <div class="col-lg-6 pt-3">
-            <form method="POST" action="/dashboard/pendings">
+            <form method="POST" action="/dashboard/bookings/completed">
                 @csrf
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nama</label>
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required autofocus>
-                    @error('name')
+                    <label for="nama_klien" class="form-label">Nama</label>
+                    <input type="text" class="form-control @error('nama_klien') is-invalid @enderror" id="nama_klien" nama_klien="nama_klien" value="{{ old('nama_klien') }}" required autofocus>
+                    @error('nama_klien')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Alamat</label>
-                    <textarea class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{ old('address') }}" required autofocus></textarea>
-                    @error('address')
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" value="{{ old('alamat') }}" required autofocus></textarea>
+                    @error('alamat')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>

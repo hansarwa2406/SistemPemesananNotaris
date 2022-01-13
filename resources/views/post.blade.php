@@ -17,7 +17,7 @@
                     {!! $post->body !!}
                 </article>
 
-                <a class="btn btn-primary d-block my-5" href="/blog">Back to posts</a>
+                <a class="btn btn-primary d-block my-5" href="/post">Back to posts</a>
             </div>
         </div>
     </div>

@@ -117,4 +117,12 @@ class DashboardBookingController extends Controller
 
         return redirect('/dashboard/bookings')->with('Berhasil', 'Data Berhasil Dihapus');
     }
+
+    public function completed(Request $request)
+    {
+        $client=$request->validate([
+            'name' => 'required',
+            
+        ]);
+    }
 }
