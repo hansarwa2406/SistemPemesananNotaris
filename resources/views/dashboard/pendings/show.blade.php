@@ -16,7 +16,7 @@
         </div>
 
         <div class="col-lg-6 pt-3">
-            <form method="POST" action="/dashboard/bookings">
+            <form method="POST" action="/dashboard/pendings">
                 @csrf
                 <div class="mb-3">
                     <label for="name" class="form-label">Nama</label>
