@@ -33,24 +33,24 @@ class DatabaseSeeder extends Seeder
         // ]);
         
         Category::create([
-            'name' => 'Web Programming',
-            'slug' => 'web-programming'
+            'name' => 'Notary',
+            'slug' => 'notary'
         ]);
         
         Category::create([
-            'name' => 'Web Design',
-            'slug' => 'web-design'
+            'name' => 'Law',
+            'slug' => 'law'
         ]);
         
-        Category::create([
-            'name' => 'Personal',
-            'slug' => 'personal'
-        ]);
+        // Category::create([
+        //     'name' => 'Personal',
+        //     'slug' => 'personal'
+        // ]);
 
-        Category::create([
-            'name' => 'Coffee',
-            'slug' => 'coffee'
-        ]);
+        // Category::create([
+        //     'name' => 'Coffee',
+        //     'slug' => 'coffee'
+        // ]);
 
         Post::factory(28)->create();
     }
