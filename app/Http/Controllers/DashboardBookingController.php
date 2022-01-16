@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use App\Models\Client;
-use App\Models\Notary;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardBookingController extends Controller
@@ -30,7 +30,7 @@ class DashboardBookingController extends Controller
     {
         return view('dashboard.bookings.create', [
             // 'client' => Client::all(),
-            'notary' => Notary::all()
+            'users' => User::all()
         ]);
     }
 
@@ -43,9 +43,9 @@ class DashboardBookingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_jadwal' => 'required',
-            'id_notaris' => 'required|max:8',
-            'id_klien' => 'required|max:8',
+            'nama_notaris' => 'required',
+            'nama_klien' => 'required|max:50',
+            'subject' => 'required|max:50',
             'start_date' => 'required',
             'end_date' => 'required',
         ]);
@@ -78,8 +78,8 @@ class DashboardBookingController extends Controller
     {
         return view('dashboard.bookings.edit', [
             'booking' => $booking,
-            'client' => Client::all(),
-            'notary' => Notary::all()
+            // 'client' => Client::all(),
+            'notary' => User::all()
         ]);
     }
 
@@ -93,9 +93,9 @@ class DashboardBookingController extends Controller
     public function update(Request $request, Booking $booking)
     {
         $request->validate([
-            'id_jadwal' => 'required',
-            'id_notaris' => 'required|max:8',
-            'id_klien' => 'required|max:8',
+            'nama_notaris' => 'required',
+            'nama_klien' => 'required|max:50',
+            'subject' => 'required|max:50',
             'start_date' => 'required',
             'end_date' => 'required',
         ]);

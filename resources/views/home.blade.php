@@ -88,7 +88,7 @@
                 </h2>
 
                 <div class="steps__container grid">
-                    <a href="/schedules" class="nav__link">
+                    <a href="/schedules" target="_blank" class="nav__link">
                         <div class="steps__card">
                             <div class="steps__card-number">01</div>
                             <h3 class="steps__card-title">Jadwal Konsultasi</h3>
@@ -98,7 +98,7 @@
                         </div>
                     </a>
 
-                    <a href="/post" class="nav__link">
+                    <a href="/post" target="_blank" class="nav__link">
                         <div class="steps__card">
                             <div class="steps__card-number">02</div>
                             <h3 class="steps__card-title">Blog Notaris</h3>
@@ -108,7 +108,7 @@
                         </div>
                     </a>
 
-                    <a href="/chats" class="nav__link">
+                    <a href="https://api.whatsapp.com/send?phone=+6281905972540&text=Saya ingin bertanya boleh?" target="_blank" class="nav__link">
                         <div class="steps__card">
                             <div class="steps__card-number">03</div>
                             <h3 class="steps__card-title">Ruang Diskusi</h3>

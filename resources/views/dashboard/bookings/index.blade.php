@@ -22,7 +22,8 @@
                     <th scope="col">Nama Klien</th>
                     <th scope="col">Nama Notaris</th>
                     <th scope="col">Perihal Subjek</th>
-                    <th scope="col">Waktu</th>
+                    <th scope="col">Mulai</th>
+                    <th scope="col">Selesai</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -32,8 +33,9 @@
                         <td class=" text-center">{{ $loop->iteration }}</td>
                         <td>{{ $bookings->nama_klien }}</td>
                         <td>{{ $bookings->nama_notaris }}</td>
-                        <td>{{ $bookings->subjek}}</td>
-                        <td>{{ $bookings->waktu }}</td>
+                        <td>{{ $bookings->subject}}</td>
+                        <td>{{ $bookings->start_date }}</td>
+                        <td>{{ $bookings->end_date }}</td>
 
                         <td class=" text-center">
                             <a href="/dashboard/bookings/{{ $bookings->id }}" class="badge bg-info text-decoration-none" title="View"><span data-feather="eye"></a>
@@ -55,7 +57,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Apakah anda ingin menghapus jadwal: <strong>"{{ $bookings->id }}"</strong> ?
+                                    Apakah anda ingin menghapus jadwal: <strong>"{{ $bookings->subject }}"</strong> ?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>

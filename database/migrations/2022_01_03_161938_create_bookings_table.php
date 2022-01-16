@@ -15,9 +15,9 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->string('id_jadwal')->unique();
-            $table->foreignId('id_notaris');
-            $table->foreignId('id_klien');
+            $table->string('nama_notaris');
+            $table->string('nama_klien');
+            $table->string('subject');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->timestamps();

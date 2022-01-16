@@ -9,40 +9,53 @@
         @method('put')
         @csrf
         <div class="mb-3">
-          <label for="nama_klien" class="form-label">Nama Klien</label>
-          <input type="text" class="form-control @error('nama_klien') is-invalid @enderror" id="nama_klien" name="nama_klien" value="{{ old('nama_klien', $booking->nama_klien) }}" required autofocus>
-          @error('nama_klien')
-              <div class="invalid-feedback">
-                  {{ $message }}
-              </div>
-          @enderror
-      </div>
+            <label for="nama_klien" class="form-label">Nama Klien</label>
+            <input type="text" class="form-control @error('nama_klien') is-invalid @enderror" id="nama_klien" name="nama_klien" value="{{ old('nama_klien') }}" required autofocus>
+            @error('nama_klien')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
         <div class="mb-3">
-          <label for="nama_notaris" class="form-label">Nama Notaris</label>
-          <input type="text" class="form-control @error('nama_notaris') is-invalid @enderror" id="nama_notaris" name="nama_notaris" value="{{ old('nama_notaris', $booking->nama_notaris) }}" required autofocus>
-          @error('nama_notaris')
-              <div class="invalid-feedback">
-                  {{ $message }}
-              </div>
-          @enderror
-      </div>
+            <label for="nama_notaris" class="form-label">Nama Notaris</label>
+            <select class="form-select" name="nama_notaris">
+                @foreach ($users as $user)
+                    @if (old('nama_notaris') == $user->id)
+                        <option value="{{ $user->name}}" selected>{{ $user->name }}</option>
+                    @else
+                        <option value="{{ $user->name}}">{{ $user->name }}</option>
+                    @endif
+                @endforeach
+            </select>
+        </div>
         <div class="mb-3">
-          <label for="subjek" class="form-label">Subjek</label>
-          <input type="text" class="form-control @error('subjek') is-invalid @enderror" id="subjek" name="subjek" value="{{ old('subjek', $booking->subjek) }}" required autofocus>
-          @error('subjek')
-              <div class="invalid-feedback">
-                  {{ $message }}
-              </div>
-          @enderror
-      </div>
+            <label for="subject" class="form-label">Subjek</label>
+            <input type="text" class="form-control @error('subject') is-invalid @enderror" id="subject" name="subject" value="{{ old('subject') }}" required autofocus>
+            @error('subject')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
         <div class="mb-3">
-          <label for="waktu" class="form-label">Waktu</label>
-          <input type="dateTime" class="form-control @error('waktu') is-invalid @enderror" id="waktu" name="waktu" value="{{ old('waktu', $booking->waktu) }}" required autofocus>
-          @error('waktu')
-              <div class="invalid-feedback">
-                  {{ $message }}
-              </div>
-          @enderror
+            <label for="start_date" class="form-label">Mulai</label>
+            <input type="datetime-local" class="form-control @error('start_date') is-invalid @enderror" id="start_date" name="start_date" value="{{ old('start_date') }}" placeholder="start_date" required autofocus>
+            @error('start_date')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+            <div class="mb-3">
+            <label for="end_date" class="form-label">Selesai</label>
+            <input type="datetime-local" class="form-control @error('end_date') is-invalid @enderror" id="end_date" name="end_date" value="{{ old('end_date') }}" placeholder="end_date" required autofocus>
+            @error('end_date')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
     
 
   
