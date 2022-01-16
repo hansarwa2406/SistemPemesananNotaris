@@ -5,6 +5,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PendingController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
@@ -69,6 +70,10 @@ Route::post('/logout', [LoginController::class, 'logout']);
 // Register
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+// --------------------------------------------------------------------------
+
+// Pending
+Route::post('/pending', [PendingController::class, 'store']);
 // --------------------------------------------------------------------------
 
 // Dashboard

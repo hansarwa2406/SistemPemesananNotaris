@@ -12,7 +12,7 @@ class Booking extends Model
 
     public function getRouteKeyName()
     {
-        return 'id_jadwal';
+        return 'id';
     }
 
     public function klien()

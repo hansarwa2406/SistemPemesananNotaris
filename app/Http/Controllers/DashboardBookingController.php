@@ -79,7 +79,7 @@ class DashboardBookingController extends Controller
         return view('dashboard.bookings.edit', [
             'booking' => $booking,
             // 'client' => Client::all(),
-            'notary' => User::all()
+            'users' => User::all()
         ]);
     }
 

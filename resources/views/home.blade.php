@@ -343,7 +343,7 @@
                     </div>
                 </div>
 
-                <form action="/dashboard/pendings/" method="POST" class="contact__form">
+                <form action="/pending" method="POST" class="contact__form">
                     @csrf
                     <div class="contact__inputs">
                         <div class="contact__content">
@@ -366,6 +366,8 @@
                             <label for="message" class="contact__label">Pesan</label>
                         </div>
                     </div>
+
+                    <input type="hidden" id="status" name="status" value="Menunggu Konfirmasi">
 
                     <button class="button button--flex" type="submit">
                         Kirim Pesan
