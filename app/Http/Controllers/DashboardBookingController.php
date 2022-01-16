@@ -121,8 +121,8 @@ class DashboardBookingController extends Controller
     public function completed(Request $request)
     {
         $client=$request->validate([
-            'name' => 'required',
-            
+            'nama_klien' => 'required',
+            'alamat' => 'required',
         ]);
     }
 }
