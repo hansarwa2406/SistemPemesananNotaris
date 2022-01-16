@@ -88,7 +88,7 @@ class DashboardClientController extends Controller
             'id_klien' => 'required|max:8',
             'nama_klien' => 'required|max:80',
             'alamat' => 'required|max:100',
-            'no_tlp' => 'required|max:14',
+            'no_tlp' => 'required',
 
         ]);
         $client->update($request->all());

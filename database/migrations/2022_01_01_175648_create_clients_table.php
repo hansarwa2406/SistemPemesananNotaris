@@ -18,7 +18,7 @@ class CreateClientsTable extends Migration
             $table->string('id_klien')->unique();
             $table->string('nama_klien');
             $table->string('alamat');
-            $table->integer('no_tlp');
+            $table->string('no_tlp');
             $table->timestamps();
         });
     }
